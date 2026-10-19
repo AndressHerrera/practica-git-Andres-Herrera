@@ -101,6 +101,7 @@ HIGH_TEMP_LIMIT = 30.0
 
 temp_c_text = "35.5"
 
+# check that the text is a number (we remove one "-" and one "." before checking)
 is_number = temp_c_text.replace("-", "", 1).replace(".", "", 1).isdigit()
 
 if is_number:
@@ -285,6 +286,7 @@ n1_text = "4"
 n2_text = "7"
 n3_text = "10"
 
+# negative numbers are allowed, so we remove one "-" before checking
 valid_n1 = n1_text.replace("-", "", 1).isdigit()
 valid_n2 = n2_text.replace("-", "", 1).isdigit()
 valid_n3 = n3_text.replace("-", "", 1).isdigit()
